@@ -16,6 +16,9 @@
 
 - Advance: Decorators, Generators, Iterators, MetaProgramming
 
+
+## Python shell
+
 ```python
 >>> 12+12
 24
@@ -45,11 +48,6 @@
 [123, 'an', 1.2]
 >>> len(mylist)
 3
->>> myD=('one':"supermna","two":"hanuman"}
-  File "<stdin>", line 1
-    myD=('one':"supermna","two":"hanuman"}
-              ^
-SyntaxError: invalid syntax
 >>> myD={'one':"supermna","two":"hanuman"}
 >>> myD
 {'one': 'supermna', 'two': 'hanuman'}
@@ -58,12 +56,6 @@ SyntaxError: invalid syntax
 >>> mytup=(1,2,4)
 >>> mytup[0]
 1
->>> len(mytup)\
-... len(mytup) 
-  File "<stdin>", line 2
-    len(mytup)
-    ^^^
-SyntaxError: invalid syntax
 >>> len(mytup)
 3
 >>> 
