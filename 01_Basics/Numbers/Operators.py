@@ -104,3 +104,17 @@ str('chai')
 print('chai')
 # Displays the string:
 # chai
+
+
+# -------------------------
+# Bitwise Operation
+# -------------------------
+
+# left shift
+x=2;
+print(x<<2)
+
+#right shift
+x=2
+print(x>>2)
+
