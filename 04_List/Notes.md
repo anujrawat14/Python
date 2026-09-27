@@ -1,0 +1,7 @@
+- append() → add at end
+- insert() → add at specific index
+- remove(value) → remove by value
+- pop() → remove by index (default = last)
+- del → delete by index/slice
+- clear() → remove all elements
+- copy() → create a shallow copy- 
