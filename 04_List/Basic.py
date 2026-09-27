@@ -1,11 +1,13 @@
 # List definition:
 # A list is an ordered, mutable collection of elements.
 # Lists can contain different data types.
+
+
+teaVarities = ["black", "Green", "Oolong"]
+
 # List is mutable: We can change, add, or remove elements after creating the list.
 
-
-teaVarities = ["Black", "Green", "Oolong"]
-
+teaVarities[1]="Black"
 
 # =========================
 # Indexing
