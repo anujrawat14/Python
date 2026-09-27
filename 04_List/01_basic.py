@@ -112,6 +112,6 @@ print()
 if "Oolong" in teaVarities:
     print("i have Oolong tea ");
 
-
+teaVaritiesCpy=teaVarities
 #new copy memory refernce with difernce refrence
-teaVaritiesCpy=teaVarities.copy()
+# teaVaritiesCpy=teaVarities.copy()
