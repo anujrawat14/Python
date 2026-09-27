@@ -1,3 +1,4 @@
+
 # =========================
 # Slicing
 # =========================
@@ -6,6 +7,8 @@
 # list[start:end]
 # start is included
 # end is excluded
+
+teaVarities = ["Black", "Green", "Oolong"]
 
 print(teaVarities[1:3])
 # Output: ['White', 'Oolong']
