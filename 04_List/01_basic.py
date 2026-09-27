@@ -17,8 +17,8 @@ teaVarities = ["Black", "Green", "Oolong"]
 # Negative indexing:
 # -n -> -1
 
-print(teaVarities[0])    # Black
-print(teaVarities[-1])   # Oolong
+print(teaVarities[0])  # Black
+print(teaVarities[-1])  # Oolong
 
 
 # =========================
@@ -72,46 +72,104 @@ print(teaVarities)
 
 teaVarities = ["Black", "Green", "Oolong"]
 
-print(teaVarities[2:2]) 
+print(teaVarities[2:2])
 # empty array
 
-teaVarities[0:0]=["test1","test2"]
+teaVarities[0:0] = ["test1", "test2"]
 print(teaVarities)
 # this willl add the value at 0 position without removing an elemnt form prvious list
 
 # insert nothing also call as delete
-teaVarities[0:2]=[]
+teaVarities[0:2] = []
 print(teaVarities)
 
 
-#append  : add in list at end
-teaVarities.append("brown")
-print(teaVarities)
+# =========================
+# append()
+# =========================
 
-#pop : delete last  elemnt from list 
-teaVarities.pop();
-print(teaVarities)
+# append() adds an element at the end of the list.
 
-#remove :it delete values give in remove method
-teaVarities.remove("Black")
-print(teaVarities)
+teaVarities.append("Brown")
 
-#insert :add in list at iven  positon
-teaVarities.insert(0,"Black")
 print(teaVarities)
 
 
-# looping in array
+# =========================
+# pop()
+# =========================
+
+# pop() removes and returns the last element.
+
+teaVarities.pop()
+
+print(teaVarities)
+
+
+# pop(index)
+# We can also remove an element using its index.
+
+teaVarities.pop(0)
+
+
+# =========================
+# remove()
+# =========================
+
+# remove(value) removes the first occurrence
+# of the given value.
+
+teaVarities.remove("Green")
+
+print(teaVarities)
+
+
+# =========================
+# insert()
+# =========================
+
+# insert(index, value)
+# Adds an element at the given position.
+
+teaVarities.insert(0, "Black")
+
+print(teaVarities)
+
+
+# =========================
+# Looping through a List
+# =========================
+
 for i in teaVarities:
-    print(i,end=" _ ");
-    # by default it end with /n
+    print(i, end=" _ ")
+
+# print() normally ends with '\n'
+# end=" _ " changes the ending.
 
 print()
 
-#conditional
-if "Oolong" in teaVarities:
-    print("i have Oolong tea ");
 
-teaVaritiesCpy=teaVarities
-#new copy memory refernce with difernce refrence
-# teaVaritiesCpy=teaVarities.copy()
+# =========================
+# Conditional with List
+# =========================
+
+if "Oolong" in teaVarities:
+    print("I have Oolong tea")
+
+
+
+# =========================
+# Copying a List
+# =========================
+
+
+teaVaritiesCopyRef=teaVarities
+#Both variables refer to the SAME list and This does NOT create a new list..
+
+teaVaritiesCopyRef.append("Green")
+print(teaVaritiesCopyRef)
+print(teaVarities)
+# Both List will be updated
+
+# new copy memory refernce with difernce refrence
+teaVaritiesCpy = teaVarities.copy()
