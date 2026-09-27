@@ -173,3 +173,8 @@ print(teaVarities)
 
 # new copy memory refernce with difernce refrence
 teaVaritiesCpy = teaVarities.copy()
+teaVaritiesCpy.append("Lemon")
+print(teaVarities)
+print(teaVaritiesCpy)
+
+#list comprehension
