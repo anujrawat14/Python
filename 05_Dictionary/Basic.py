@@ -18,7 +18,9 @@ print(chai_types.get("ginger"))
 
 chai_types["Green"] = "fresh"
 
-# 2:
+# 2: length 
+length=len(chai_types)
+print(length)
 
 # looping in dictionary
 
