@@ -1,20 +1,44 @@
+chai_types = {"Masala": "Spicy", "Ginger": "Zesty", "Green": "Mild"}
 
 # Methods
-# 1 get()
+
+#1. get() is used to access a value using its key.
+
+print(chai_types.get("Ginger"))
+# Output: Zesty
+
+# If the key is not found, get() returns None.
+
 print(chai_types.get("ginger"))
-# return null if value is  not matched
+#  Output: None
 
-chai_types["Green"] = "fresh"
+# We can also provide a default value
 
-# 2: length
+print(chai_types.get("Black", "Key not found"))
+# Output: Key not found
+
+
+# 2: # len() returns the number of key-value pairs in the dictionary.
+
 length = len(chai_types)
 print(length)
 
-# 3 pop : - delete base on key
-chai_types.pop("Early Grey")
+# pop() removes an item based on its key and returns the removed value.
 
-# 4 pop items :-  delete last items
-chai_types.popitem()
+removed_value = chai_types.pop("Earl Grey")
+print(removed_value)
+print(chai_types)
 
-#  5 clear :remove all itesm from dictionary
-# chai_types.clear()
+# popitem() removes and returns the LAST inserted key-value pair.
+
+removed_item = chai_types.popitem()
+
+print(removed_item)
+print(chai_types)
+
+# clear() removes ALL items from the dictionary.
+
+chai_types.clear()
+print(chai_types)
+
+# Output: {}
