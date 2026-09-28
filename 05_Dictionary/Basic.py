@@ -11,6 +11,11 @@ print(chai_types)
 # accessing each value using key
 print(chai_types["Ginger"])
 
+# add items in dictornary
+chai_types["Early Grey"] = "citrus"
+print(chai_types)
+
+
 # Methods
 # 1 get()
 print(chai_types.get("ginger"))
@@ -18,9 +23,17 @@ print(chai_types.get("ginger"))
 
 chai_types["Green"] = "fresh"
 
-# 2: length 
-length=len(chai_types)
+# 2: length
+length = len(chai_types)
 print(length)
+
+# 3 pop : - delete base on key
+chai_types.pop("Early Grey")
+
+# 4 pop items :-  delete last items
+chai_types.popitem()
+
+
 
 # looping in dictionary
 
@@ -39,3 +52,5 @@ for key, value in chai_types.items():
 # membership in
 if "Masala" in chai_types:
     print(True)
+
+
