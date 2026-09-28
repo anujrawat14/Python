@@ -54,3 +54,7 @@ if "Masala" in chai_types:
     print(True)
 
 
+#copy of the dictionary
+
+chai_types_copy=chai_types.copy()
+print(chai_types_copy)
