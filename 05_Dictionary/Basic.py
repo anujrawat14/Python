@@ -1,18 +1,42 @@
-# dictionary definition
+# A dictionary is an ordered, mutable collection of key-value pairs.
 
-# syntax
-# 1 :- using dict keyword
+# Syntax:
+# {key: value}
+
+# Creating a Dictionary
+
+# 1. Using dict() keyword/function
+
 chai_types = dict()
+print(chai_types)
+
 # 2 :- using curly braces {key: value}
-chai_types = {"Masala": "spicy", "Ginger": "zesty", "Green": "Mild"}
+chai_types = {"Masala": "Spicy", "Ginger": "Zesty", "Green": "Mild"}
 
 print(chai_types)
 
-# accessing each value using key
-print(chai_types["Ginger"])
 
-# add items in dictornary
-chai_types["Early Grey"] = "citrus"
+# Access a value using its key
+print(chai_types["Ginger"])
+# Zesty
+
+
+# Using get()
+print(chai_types.get("Ginger"))
+# Zesty
+
+# get() is safer because it returns None if the key does not exist instead of raising KeyError.
+
+print(chai_types.get("Black"))
+# None
+
+# Add a new key-value pair
+chai_types["Earl Grey"] = "Citrus"
+print(chai_types)
+
+# If the key already exists, its value is updated
+
+chai_types["Green"] = "Light"
 print(chai_types)
 
 
@@ -44,25 +68,46 @@ print(chai_types_copy)
 # nested dictionary
 
 tea_shop = {
-            "chai": {"Masala": "Spicy", "Ginger": "Zesty"},
-              "tea": {"Green":"Mild","Black":"Strong"}
-            }
+    "chai": {
+        "Masala": "Spicy",
+        "Ginger": "Zesty"
+    },
 
+    "tea": {
+        "Green": "Mild",
+        "Black": "Strong"
+    }
+}
+
+
+# Access nested dictionary
 
 print(tea_shop["chai"])
+# {'Masala': 'Spicy', 'Ginger': 'Zesty'}
+
+
 print(tea_shop["chai"]["Ginger"])
+# Zesty
+
+
 print(tea_shop["tea"])
+# {'Green': 'Mild', 'Black': 'Strong'}
+
+
 print(tea_shop["tea"]["Black"])
+# Strong
 
-#Dictionary compression comprehension
 
-squared_nums={key:key**2 for key in range(5)}
+# Dictionary compression comprehension
+
+squared_nums = {key: key**2 for key in range(5)}
 print(squared_nums)
 print(squared_nums[3])
 
 
-# create dictionary using keys list and default values 
-keys=["Masala","Ginger","Lemon"]
-default_value="Delicious"
-new_dict=dict.fromkeys(keys,default_value)
+#  Creating Dictionary Using fromkeys()
+
+keys = ["Masala", "Ginger", "Lemon"]
+default_value = "Delicious"
+new_dict = dict.fromkeys(keys, default_value)
 print(new_dict)
