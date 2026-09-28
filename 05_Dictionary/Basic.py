@@ -34,7 +34,6 @@ chai_types.pop("Early Grey")
 chai_types.popitem()
 
 
-
 # looping in dictionary
 
 for chai in chai_types:
@@ -54,7 +53,20 @@ if "Masala" in chai_types:
     print(True)
 
 
-#copy of the dictionary
+# copy of the dictionary
 
-chai_types_copy=chai_types.copy()
+chai_types_copy = chai_types.copy()
 print(chai_types_copy)
+
+# nested dictionary
+
+tea_shop = {
+            "chai": {"Masala": "Spicy", "Ginger": "Zesty"},
+              "tea": {"Green":"Mild","Black":"Strong"}
+            }
+
+
+print(tea_shop["chai"])
+print(tea_shop["chai"]["Ginger"])
+print(tea_shop["tea"])
+print(tea_shop["tea"]["Black"])
