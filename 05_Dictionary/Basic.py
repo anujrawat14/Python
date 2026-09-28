@@ -70,3 +70,5 @@ print(tea_shop["chai"])
 print(tea_shop["chai"]["Ginger"])
 print(tea_shop["tea"])
 print(tea_shop["tea"]["Black"])
+
+#Dictionary compression comprehension
