@@ -3,7 +3,6 @@
 # =========================
 
 # A tuple is immutable, while a list is mutable.
-
 tea_types = ("Black", "Green", "Oolong")
 
 
