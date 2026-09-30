@@ -1,13 +1,23 @@
-# tuple is immutable ,list are mutable
+# Tuple is immutable, while a list is mutable.
 
 tea_types = ("Black", "Green", "Oolong")
 
 # indexing
+print(tea_types[0])     # Black
+print(tea_types[-1])    # Oolong
 
-print(tea_types[0])
-print(tea_types[-1])
 
 #slicing
-print(tea_types[1:])
 
-#imuatble
+print(tea_types[1:])    # ('Green', 'Oolong')
+
+#Immutable
+
+# We cannot change an existing element of a tuple.
+
+tea_types[0] = "Masala"
+
+# TypeError: 'tuple' object does not support item assignment
+
+
+
