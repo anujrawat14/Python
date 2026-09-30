@@ -80,5 +80,5 @@ li = ["One", "Two"]
 
 [one, two] = li
 
-print(one)        # One
-print(two)        # Two
+print(one)       # One
+print(two)       # Two
