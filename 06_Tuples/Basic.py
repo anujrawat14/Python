@@ -3,15 +3,15 @@
 tea_types = ("Black", "Green", "Oolong")
 
 # indexing
-print(tea_types[0])     # Black
-print(tea_types[-1])    # Oolong
+print(tea_types[0])  # Black
+print(tea_types[-1])  # Oolong
 
 
-#slicing
+# slicing
 
-print(tea_types[1:])    # ('Green', 'Oolong')
+print(tea_types[1:])  # ('Green', 'Oolong')
 
-#Immutable
+# Immutable
 
 # We cannot change an existing element of a tuple.
 
@@ -20,6 +20,9 @@ print(tea_types[1:])    # ('Green', 'Oolong')
 # TypeError: 'tuple' object does not support item assignments
 
 
-more_tea=("Herbal","early Grey")
-all_tea=tea_types+more_tea
+more_tea = ("Herbal", "early Grey")
+all_tea = tea_types + more_tea
 print(all_tea)
+
+if "Herbal" in all_tea:
+    print(True)
