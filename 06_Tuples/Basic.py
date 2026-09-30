@@ -17,7 +17,7 @@ print(tea_types[1:])    # ('Green', 'Oolong')
 
 tea_types[0] = "Masala"
 
-# TypeError: 'tuple' object does not support item assignment
+# TypeError: 'tuple' object does not support item assignments
 
 
 
