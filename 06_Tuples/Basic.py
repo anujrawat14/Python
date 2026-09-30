@@ -26,3 +26,7 @@ print(all_tea)
 
 if "Herbal" in all_tea:
     print(True)
+
+
+#count
+print(more_tea.count("Herbal"))
