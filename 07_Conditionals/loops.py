@@ -1,121 +1,127 @@
 # =========================
-# Conditional Statements
+# For Loop
 # =========================
 
-# A conditional statement is used to execute
-# different code based on a condition.
-
-
-# =========================
-# 1. if
-# =========================
-
-age = 20
-
-if age >= 18:
-    print("You are an adult")
+# A for loop is used to iterate over a sequence
+# such as a list, tuple, string, range, etc.
 
 
 # =========================
-# 2. if-else
+# 1. Loop through a list
 # =========================
 
-age = 16
+tea_types = ["Black", "Green", "Oolong"]
 
-if age >= 18:
-    print("You can vote")
-else:
-    print("You cannot vote")
+for tea in tea_types:
+    print(tea)
 
 
 # =========================
-# 3. if-elif-else
+# 2. Loop through a string
 # =========================
 
-marks = 75
+name = "Anuj"
 
-if marks >= 90:
-    print("Grade A")
-elif marks >= 75:
-    print("Grade B")
-elif marks >= 50:
-    print("Grade C")
-else:
-    print("Fail")
+for char in name:
+    print(char)
 
 
 # =========================
-# 4. Multiple Conditions
+# 3. Using range()
 # =========================
 
-age = 20
-has_id = True
+# range(start, stop)
+# stop value is NOT included
 
-if age >= 18 and has_id:
-    print("Entry allowed")
-else:
-    print("Entry denied")
+for i in range(1, 6):
+    print(i)
 
-
-# =========================
-# 5. Nested if
-# =========================
-
-age = 20
-has_ticket = True
-
-if age >= 18:
-    if has_ticket:
-        print("You can enter")
-    else:
-        print("Ticket required")
-else:
-    print("You must be 18 or older")
+# Output:
+# 1
+# 2
+# 3
+# 4
+# 5
 
 
 # =========================
-# 6. Comparison Operators
+# 4. range(start, stop, step)
 # =========================
 
-# ==   Equal to
-# !=   Not equal to
-# >    Greater than
-# <    Less than
-# >=   Greater than or equal to
-# <=   Less than or equal to
+for i in range(1, 10, 2):
+    print(i)
 
-
-# =========================
-# 7. Logical Operators
-# =========================
-
-# and → both conditions must be True
-# or  → at least one condition must be True
-# not → reverses the condition
-
-age = 20
-
-if age >= 18 and age <= 60:
-    print("Working age")
+# Output:
+# 1
+# 3
+# 5
+# 7
+# 9
 
 
 # =========================
-# 8. Membership in Condition
+# 5. Reverse loop
 # =========================
 
-tea = "Green"
+for i in range(5, 0, -1):
+    print(i)
 
-if tea in ["Green", "Black", "Oolong"]:
-    print("Tea is available")
+# Output:
+# 5
+# 4
+# 3
+# 2
+# 1
 
 
 # =========================
-# 9. Truthy / Falsy
+# 6. for loop with condition
 # =========================
 
-name = ""
+numbers = [1, 2, 3, 4, 5]
 
-if name:
-    print("Name is available")
-else:
-    print("Name is empty")
+for num in numbers:
+    if num % 2 == 0:
+        print(num)
+
+# Output:
+# 2
+# 4
+
+
+# =========================
+# 7. break
+# =========================
+
+# break stops the loop completely
+
+for num in range(1, 10):
+    if num == 5:
+        break
+
+    print(num)
+
+# Output:
+# 1
+# 2
+# 3
+# 4
+
+
+# =========================
+# 8. continue
+# =========================
+
+# continue skips the current iteration
+
+for num in range(1, 6):
+    if num == 3:
+        continue
+
+    print(num)
+
+# Output:
+# 1
+# 2
+# 4
+# 5
