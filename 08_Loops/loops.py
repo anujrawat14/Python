@@ -125,3 +125,76 @@ for num in range(1, 6):
 # 2
 # 4
 # 5
+
+
+# =========================================================
+# 9. INFINITE WHILE LOOP
+# =========================================================
+
+# A while loop becomes infinite when
+# its condition always remains True.
+
+# Example:
+
+# while True:
+#     print("Hello")
+
+
+# Usually break is used to stop it.
+
+while True:
+
+    user_input = input("Enter 'q' to quit: ")
+
+    if user_input == "q":
+        break
+
+
+# =========================================================
+# 10. enumerate()
+# =========================================================
+
+# enumerate() gives both:
+#
+# index + value
+
+tea_types = ["Black", "Green", "Oolong"]
+
+for index, tea in enumerate(tea_types):
+
+    print(index, tea)
+
+
+# Output:
+# 0 Black
+# 1 Green
+# 2 Oolong
+
+
+# =========================================================
+# 11. WHILE LOOP
+# =========================================================
+
+# A while loop repeatedly executes code
+# as long as the condition is True.
+
+count = 1
+
+while count <= 5:
+
+    print(count)
+
+    count += 1
+
+# Output:
+# 1
+# 2
+# 3
+# 4
+# 5
+
+
+# IMPORTANT:
+# Make sure the condition eventually becomes False.
+#
+# Otherwise, you can create an infinite loop.
