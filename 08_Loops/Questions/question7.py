@@ -1,4 +1,4 @@
-# factorial  5 = 5*4*3*2*1
+# factorial  5 = 5*4*3*2*1 
 n=int(input("Enter a number : "))
 fact=1;
 
