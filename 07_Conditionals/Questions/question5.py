@@ -2,9 +2,10 @@
 
 weather=input("enter weather : ")
 
-if(weather=="sunny"):
+
+if(weather.lower=="sunny"):
     print("Go for walk")
-elif(weather=="rainy"):
+elif(weather.lower=="rainy"):
     print(" Read a book ")
 else:
     print("Build a Snowman ")
