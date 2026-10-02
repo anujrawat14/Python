@@ -1,5 +1,9 @@
 score=int(input("Enter a  score : "))
 
+if(score>100):
+    print("please verify your score")
+    exit()
+
 if(score<60):
     print("You got grade : F")
 elif(score<70):
