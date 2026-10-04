@@ -1,6 +1,3 @@
-# Deep Dive: Python File Iteration Behind the Scenes
-
-This guide breaks down every step of your interactive terminal session, explaining what Python was doing at the memory and protocol level.
 
 ---
 
