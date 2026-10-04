@@ -9,11 +9,3 @@ Under the hood, Python does not use index-based counting (like traditional C-sty
 - **Iterator**: The helper object that maintains the state of iteration. It implements `__next__()` and raises `StopIteration` when no items remain.
 
 ---
-
-## What Happens Behind the Scenes
-
-When you run:
-
-```python
-for item in [1, 2, 3, 4]:
-    print(item)
