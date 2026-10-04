@@ -4,4 +4,5 @@
 - pop() → remove by index (default = last)
 - del → delete by index/slice
 - clear() → remove all elements
-- copy() → create a shallow copy- 
+- copy() → create a shallow copy-
+- count()-> count the occurrence of char
