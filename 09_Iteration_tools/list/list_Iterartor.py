@@ -13,3 +13,8 @@ print(I.__next__())   # 3
 print(I.__next__())   # 4
 
 # print(I.__next__()) # StopIteration exception
+
+#important in list
+myNewList=[1,2,3,4]
+print(iter(myNewList) is myNewList)
+# but in file they are same
