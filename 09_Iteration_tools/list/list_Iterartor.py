@@ -17,4 +17,4 @@ print(I.__next__())   # 4
 #important in list
 myNewList=[1,2,3,4]
 print(iter(myNewList) is myNewList)
-# but in file they are same
+# A list is iterable, but it is not an iterator. A file object is both iterable and an iterator.
