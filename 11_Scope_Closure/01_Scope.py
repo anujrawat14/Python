@@ -23,3 +23,13 @@ print(username)
 func()
 # if  variable is not present locally but present globbaly so it
 # will give  same as globally variable
+
+# example
+x=99
+def func2():
+    z=x+y
+    return z
+
+result=func2(1)
+
+print(result)
