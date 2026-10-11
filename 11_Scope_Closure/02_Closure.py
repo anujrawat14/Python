@@ -1,5 +1,5 @@
 # =========================
-# Closure in Python
+# Closure in Python :# it dont send only definiton of function it also send the variable related to the definition of function 
 # =========================
 
 x = 99
