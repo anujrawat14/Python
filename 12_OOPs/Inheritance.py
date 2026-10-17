@@ -8,18 +8,19 @@ class Car:
         self.brand = brand
         self.model = model
 
-    def display():
+    def display(self):
         return f"The name is {self.brand} {self.model}"
 
 
 class ElectricCar(Car):
     def __init__(self, brand, model, batterySize):
-        super().__init__(brand,model)
+        super().__init__(brand, model)
         self.batterySize = batterySize
 
-    def display():
-        return f"The name is {self.brand} {self.model} and with battery size {self.batterySize}"
+    def display(self):
+        return f"The name is {self.brand} {self.model} and with battery size of  {self.batterySize}"
 
 
-mycar = Car("Toyota", "XUV")
-myElectricCar=ElectricCar("Mahindra","XEV 9e","79Kwh")
+myElectricCar = ElectricCar("Mahindra", "XEV 9e", "79Kwh")
+
+print(myElectricCar.display())
