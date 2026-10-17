@@ -20,6 +20,9 @@ class Car:
     def get_brand(self):
         return self.__brand + " ! "
 
+    def set_brand(self,brand):
+        self.__brand=brand
+
     def FullName(self):
         return f"The name is {self.__brand} {self.model}"
 
@@ -36,5 +39,6 @@ class ElectricCar(Car):
 myElectricCar = ElectricCar("Mahindra", "XEV 9e", "79Kwh")
 
 # print(myElectricCar.__brand)  # Error: private attribute uses name mangling
+print(myElectricCar.set_brand("Tesla"))
 
 print(myElectricCar.get_brand())
