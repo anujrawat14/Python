@@ -22,3 +22,4 @@ class ElectricCar(Car):
 
 
 mycar = Car("Toyota", "XUV")
+myElectricCar=ElectricCar("Mahindra","XEV 9e","79Kwh")
