@@ -17,5 +17,5 @@ class Car:
 MyCar = Car("tata", "Nexon")
 MyCar.model="City"
 print(MyCar.fullName())
-print(MyCar.model)
+# print(MyCar.model())
 print(MyCar.model)
