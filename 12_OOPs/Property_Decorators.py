@@ -1,4 +1,4 @@
-# Property Decorators : @property is a decorator that allows you to access a method like an attribute, without using parentheses ().
+# Property Decorators : @property is a decorator that allows you to access a method like an attribute, without using parentheses ()
 
 
 class Car:
