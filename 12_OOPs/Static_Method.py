@@ -1,4 +1,4 @@
-# Static method :
+# Static method : A static method is a function defined within a class that belongs to the class itself rather than any specific instance of that class
 
 
 class Car:
@@ -19,4 +19,6 @@ class Car:
 
 Car1 = Car("Tata", "Xuv")
 # print(Car1.general_description()) #Raises a TypeError because Python automatically passes Car1 as the first argument, but the method accepts no arguments.
+
+print(Car1.general_description())
 print(Car.general_description())
