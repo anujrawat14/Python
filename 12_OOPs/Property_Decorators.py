@@ -10,12 +10,16 @@ class Car:
     def fullName(self):
         return f"the name is {self.__brand} {self.__model}"
 
+    @property
     def model(self):
         return self.__model
 
 
 MyCar = Car("tata", "Nexon")
-MyCar.model="City"
+
+# MyCar.model="City" #
+
 print(MyCar.fullName())
-# print(MyCar.model())
+
+# print(MyCar.model()) #
 print(MyCar.model)
