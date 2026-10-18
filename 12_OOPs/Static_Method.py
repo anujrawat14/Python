@@ -22,3 +22,6 @@ Car1 = Car("Tata", "Xuv")
 
 print(Car1.general_description())
 print(Car.general_description())
+
+
+ 
