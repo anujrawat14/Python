@@ -1,4 +1,4 @@
-# Property Decorators :
+# Property Decorators : @property is a decorator that allows you to access a method like an attribute, without using parentheses ().
 
 
 class Car:
@@ -17,9 +17,9 @@ class Car:
 
 MyCar = Car("tata", "Nexon")
 
-# MyCar.model="City" #
+# MyCar.model="City" # This will raise an AttributeError
 
 print(MyCar.fullName())
 
-# print(MyCar.model()) #
+# print(MyCar.model()) #model is now accessed like an attribute(property)
 print(MyCar.model)
