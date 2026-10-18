@@ -1,4 +1,4 @@
-# Static method : 
+# Static method :
 
 
 class Car:
@@ -14,5 +14,9 @@ class Car:
     def FullName(self):
         return f"The name is {self.__brand} {self.model}"
 
+    def genral_description(self):
+        return f"Cars are mean of transport"
+
 
 Car1 = Car("Tata", "Xuv")
+print(Car1.genral_description())
