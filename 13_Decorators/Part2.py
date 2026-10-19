@@ -6,7 +6,7 @@ def outer(func):
     def inner(*args, **kargs):
 
         result= func(*args, **kargs)
-        print(f"the name of function i")
+        print(f"the name of function is {func__name__} and  arguments are {*args}")
         return result
 
     return inner
