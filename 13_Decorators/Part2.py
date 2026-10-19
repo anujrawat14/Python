@@ -3,10 +3,10 @@
 
 def outer(func):
 
-    def inner(*args, **kargs):
+    def inner(*args, **kwargs):
 
-        result = func(*args, **kargs)
-        print(f"the name of function is {func.__name__} and  arguments are {args}")
+        result = func(*args, **kwargs)
+        print(f"the name of function is {func.__name__} and  arguments are {args},{kwargs}")
         return result
 
     return inner
