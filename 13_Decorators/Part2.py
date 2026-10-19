@@ -3,17 +3,20 @@
 
 def outer(func):
 
-    def inner(*args, **kwargs):
+    def wrapper(*args, **kwargs):
 
         result = func(*args, **kwargs)
-        print(f"the name of function is {func.__name__} and  arguments are {args},{kwargs}")
+        print(
+            f"the name of function is {func.__name__} and  arguments are {args},{kwargs}"
+        )
         return result
 
-    return inner
+    return wrapper
 
 
 @outer
-def getName(name):
-    pass
+def greet(name, greting="Hello"):
+    print(f"{greting} {name}")
 
-getName("Anuj")
+
+greet("Anuj", greting="hanji")
