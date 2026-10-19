@@ -5,9 +5,14 @@ def outer(func):
 
     def wrapper(*args, **kwargs):
 
+        args_value = ", ".join(str(arg) for arg in args)
+        # compresion/loops in args
+        kwargs_value = ", ".join(f"{key}={val}" for key, val in kwargs.items())
+        # compresion/loops in Kwargs
+
         result = func(*args, **kwargs)
         print(
-            f"the name of function is {func.__name__} and  arguments are {args},{kwargs}"
+            f"calling : {func.__name__} with args : {args_value} and kwargs : {kwargs_value}"
         )
         return result
 
@@ -18,5 +23,4 @@ def outer(func):
 def greet(name, greting="Hello"):
     print(f"{greting} {name}")
 
-
-greet("Anuj", greting="hanji")
+    greet("Anuj", greting="hanji")
