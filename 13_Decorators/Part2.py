@@ -10,3 +10,10 @@ def outer(func):
         return result
 
     return inner
+
+
+@outer
+def getName(name):
+    pass
+
+getName("Anuj")
