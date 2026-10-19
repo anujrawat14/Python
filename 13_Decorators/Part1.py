@@ -4,12 +4,7 @@
 
 import time
 
-
-# To create a decorator, we commonly use a nested function.
-# The outer function accepts another function as an argument.
-# The inner function (wrapper) adds extra functionality.
-# The outer function returns the wrapper function.
-
+# if u want to make a decorator u make a nested function
 def timer(func):
     def wrapper(*args, **kwargs):
         start_time = time.time()
