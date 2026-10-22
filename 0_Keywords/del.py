@@ -16,3 +16,12 @@ del student["age"]
 
 print(student)
 # {'name': 'Anuj'}
+
+
+# Delete multiple items using slicing
+
+numbers = [10, 20, 30, 40, 50]
+del numbers[1:3]
+
+print(numbers)
+# Output: [10, 40, 50]
