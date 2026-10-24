@@ -4,3 +4,5 @@
 while True:
 
     print("\n Youtube Manager")
+    print("1. List a Favorite Video")
+    print("2. ")
