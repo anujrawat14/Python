@@ -2,7 +2,19 @@
 #     file.write("heyy !!")
 
 
-def list_all_videos(video):
+def list_all_videos(videos):
+    pass
+
+
+def add_video(video):
+    pass
+
+
+def update_video(video):
+    pass
+
+
+def delete_video(video):
     pass
 
 
@@ -19,14 +31,13 @@ while True:
 
     match choice:
         case "1":
-            list_all_videos(video)
-            pass
+            list_all_videos(videos)
         case "2":
-            pass
+            add_video(video)
         case "3":
-            pass
+            update_video(video)
         case "4":
-            pass
+            delete_video(video)
 
         case "5":
             pass
