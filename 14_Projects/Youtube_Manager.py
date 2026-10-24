@@ -2,11 +2,21 @@ import json
 
 
 def load_data():
+
     try:
         with open("youtube.txt", "r") as file:
-            pass
-    except:
-        pass
+            json.load(file)  # it load file in json and convert data into json
+
+    except FileNotFoundError:
+        return []
+
+
+# this method help with adding video to the file
+
+def save_data_helper(videos):
+
+    with open("youtube.txt", "w") as file:
+        json.dump(videos, file)
 
 
 def list_all_videos(videos):
