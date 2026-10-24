@@ -1,6 +1,11 @@
 # with open("youtube.txt","w") as file:
 #     file.write("heyy !!")
 
+
+def list_all_videos(video):
+    pass
+
+
 while True:
 
     print("\n Youtube Manager  | Choose an Options")
@@ -14,6 +19,7 @@ while True:
 
     match choice:
         case "1":
+            list_all_videos(video)
             pass
         case "2":
             pass
