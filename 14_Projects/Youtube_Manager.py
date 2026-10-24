@@ -6,17 +6,19 @@ def list_all_videos(videos):
     pass
 
 
-def add_video(video):
+def add_video(videos):
     pass
 
 
-def update_video(video):
+def update_video(videos):
     pass
 
 
-def delete_video(video):
+def delete_video(videos):
     pass
 
+
+videos = []
 
 while True:
 
@@ -33,11 +35,11 @@ while True:
         case "1":
             list_all_videos(videos)
         case "2":
-            add_video(video)
+            add_video(videos)
         case "3":
-            update_video(video)
+            update_video(videos)
         case "4":
-            delete_video(video)
+            delete_video(videos)
 
         case "5":
             pass
