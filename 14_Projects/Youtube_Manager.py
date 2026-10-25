@@ -13,6 +13,10 @@ def load_data():
     except FileNotFoundError:
         return []
 
+    #if youtube.txt is empty
+    except ( json.JSONDecodeError):
+        return []
+
 
 # this method help with adding video to the file
 
