@@ -33,8 +33,11 @@ def save_data_helper(videos):
 
 
 def list_all_videos(videos):
+    print("\n")
+    print("*" * 70)
     for index, vid in enumerate(videos, start=1):
         print(f"{index} . {vid["name"]} having  Duartion : {vid["time"]}")
+    print("*" * 70)
 
 
 def add_video(videos):
