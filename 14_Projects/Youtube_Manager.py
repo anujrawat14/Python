@@ -51,7 +51,7 @@ def update_video(videos):
     list_all_videos(videos)
     index = int(input("enter the video number to update : "))
 
-    if 1 <= index >= len(videos):
+    if 1 <= index <= len(videos):
         name = input("enter new video name : ")
         time = input("enter new video time : ")
         videos[index - 1] = {"name": name, "time": time}
