@@ -13,8 +13,8 @@ def load_data():
     except FileNotFoundError:
         return []
 
-    #if youtube.txt is empty
-    except ( json.JSONDecodeError):
+    # if youtube.txt is empty
+    except json.JSONDecodeError:
         return []
 
 
@@ -40,7 +40,7 @@ def list_all_videos(videos):
     print("\n")
     print("*" * 70)
     for index, vid in enumerate(videos, start=1):
-        print(f"{index} . {vid["name"]} having  Duartion : {vid["time"]}")
+        print(f"{index}. {vid['name']} - Duration: {vid['time']}")
     print("*" * 70)
 
 
@@ -53,7 +53,11 @@ def add_video(videos):
 
 def update_video(videos):
     list_all_videos(videos)
-    index = int(input("enter the video number to update : "))
+    try:
+        index = int(input("enter the video number to update : "))
+    except ValueError:
+        print("please enter a valid number")
+        return
 
     if 1 <= index <= len(videos):
         name = input("enter new video name : ")
@@ -66,7 +70,11 @@ def update_video(videos):
 
 def delete_video(videos):
     list_all_videos(videos)
-    index = int(input("enter the video number to delete : "))
+    try:
+        index = int(input("enter the video number to delete : "))
+    except ValueError:
+        print("please enter a valid number")
+        return
 
     if 1 <= index <= len(videos):
         # videos.remove(index-1)
