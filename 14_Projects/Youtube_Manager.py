@@ -68,6 +68,8 @@ def delete_video(videos):
         # videos.remove(index-1)
         del videos[index - 1]
         save_data_helper(videos)
+    else:
+        print("Invalid index selected")
 
 
 def main():
