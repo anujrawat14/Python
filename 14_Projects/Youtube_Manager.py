@@ -5,15 +5,13 @@ def load_data():
     try:
         with open("youtube.txt", "r") as file:
             # return json.load(file)
-            test=json.load(file)
+            test = json.load(file)
             # print(test) #checking purpose
             # print(type(test)) #checking purpose
             return test
 
     except FileNotFoundError:
         return []
-
-    
 
 
 # this method help with adding video to the file
@@ -30,6 +28,8 @@ def list_all_videos(videos):
     #     print(f"{index}. {video["name"]}  with duration {video["time"]} ")
     for vid in videos:
         print(f"{vid}")
+        # {'name': 'CahiAurPython', 'time': '3:15'}
+        # {'name': 'chai aur react', 'time': '4:20'}
 
 
 def add_video(videos):
