@@ -48,11 +48,26 @@ def add_video(videos):
 
 
 def update_video(videos):
-    pass
+    list_all_videos(videos)
+    index = int(input("enter the video number to update : "))
+
+    if 1 <= index >= len(videos):
+        name = input("enter new video name : ")
+        time = input("enter new video time : ")
+        videos[index - 1] = {"name": name, "time": time}
+        save_data_helper(videos)
+    else:
+        print("Invalid index selected")
 
 
 def delete_video(videos):
-    pass
+    list_all_videos(videos)
+    index = int(input("enter the video number to delete : "))
+
+    if 1 <= index <= len(videos):
+        # videos.remove(index-1)
+        del videos[index - 1]
+        save_data_helper(videos)
 
 
 def main():
@@ -68,7 +83,7 @@ def main():
         print("4. Delete youtube video ")
         print("5 . Exit The App")
 
-        choice = input("Enter Your Choice")
+        choice = input("Enter Your Choice : ")
 
         # print(videos) #check current videos
 
