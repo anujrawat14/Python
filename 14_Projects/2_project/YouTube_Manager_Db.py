@@ -25,13 +25,7 @@ def list_all_videos():
 
 def add_video(name, time):
 
-    cursor.execute(
-        """
-                    INSERT INTO videos(name,time) VALUES(?,?)
-             """,
-        (name, time),
-    )
-
+    cursor.execute("INSERT INTO videos(name,time) VALUES(?,?)", (name, time))
     con.commit()
 
 
