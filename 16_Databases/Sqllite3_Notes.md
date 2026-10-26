@@ -42,6 +42,16 @@ print(res.fetchone())
 
 # Output: ('movie',)
 ```
+## 5. Insert in database when inside function body
+
+```python
+
+def update(name,title):
+      cursor.execute("INSERT INTO videos(name,time) VALUES(?,?)", (name, time))
+
+```
+
+
 
 ## Flow
 
