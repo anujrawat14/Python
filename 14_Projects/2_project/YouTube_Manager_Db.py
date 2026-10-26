@@ -30,12 +30,7 @@ def add_video(name, time):
 
 
 def update_video(Id, Name, Time):
-    cursor.execute(
-        """
-                        UPDATE videos SET name = ?,time=? WHERE id = ?   
-            """,
-        (Name, Time, Id),
-    )
+    cursor.execute(" UPDATE videos SET name = ?,time=? WHERE id = ? ", (Name, Time, Id))
     con.commit()
 
 
