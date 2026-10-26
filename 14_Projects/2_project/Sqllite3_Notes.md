@@ -1,19 +1,77 @@
+# SQLite3 in Python
 
-<!-- import sqlite3  -->
+## 1. Import SQLite3
 
-<!-- create connection object -->
+```python
+import sqlite3
+```
 
-<!-- con=sqlite3.connect(filename) -->
+## 2. Create a Connection
 
-<!-- In order to execute SQL statements and fetch results from SQL queries, we will need to use a database cursor. Call con.cursor() to create the Cursor: -->
+```python
+# Creates a connection to the database
+# If the database file doesn't exist, it creates one.
 
-<!-- cur = con.cursor()  -->
+con = sqlite3.connect("movies.db")
+```
 
-<!-- then we execute querries like -->
+## 3. Create a Cursor
 
-<!-- cur.execute("CREATE TABLE movie(title, year, score)") -->
+```python
+# A cursor is used to execute SQL queries
+# and fetch query results.
 
-<!-- res = cur.execute("SELECT name FROM sqlite_master")
-res.fetchone()
-iyt will give an tuple("movie")
- -->
+cur = con.cursor()
+```
+
+## 4. Execute SQL Queries
+
+```python
+# Create a table
+cur.execute("CREATE TABLE movie(title, year, score)")
+```
+
+## 5. Fetch Database Information
+
+```python
+# Get the names of database tables
+res = cur.execute("SELECT name FROM sqlite_master WHERE type='table'")
+
+# Fetch one row
+print(res.fetchone())
+
+# Output: ('movie',)
+```
+
+## Flow
+
+```text
+import sqlite3
+      ↓
+Create Connection
+      ↓
+Create Cursor
+      ↓
+Execute SQL Query
+      ↓
+Fetch Results (if needed)
+      ↓
+Commit Changes (if needed)
+      ↓
+Close Connection
+```
+
+## Important Notes
+
+- **Connection (`con`):** Connects to the database.
+- **Cursor (`cur`):** Executes SQL queries and retrieves results.
+- **`execute()`:** Executes an SQL statement.
+- **`fetchone()`:** Returns the next row as a tuple, or `None` if no row remains.
+- **`commit()`:** Saves pending database changes.
+- **`close()`:** Closes the database connection.
+
+```python
+# Save changes and close the connection
+con.commit()
+con.close()
+```
