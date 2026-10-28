@@ -9,14 +9,21 @@ def fetch_random_user():
 
     # print(type(response))
 
-    print(response)
+    #print(response)
 
     data = response.json()
     # converts the JSON response into Python data, usually a dictionary or list.
 
     if data["success"] and "data" in data:
         user_data = data["data"]
-        print(user_data)
+
+        # Access the list of users
+        # users = user_data["data"]
+
+        # # Access the first user in the list
+        # first_name = users[0]["name"]["first"]
+
+        # print(first_name)
 
 
 fetch_random_user()
