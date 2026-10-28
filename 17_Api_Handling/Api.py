@@ -3,12 +3,11 @@ import requests
 
 def fetch_random_user():
 
-    url = "https://api.freeapi.app/api/v1/public/randomusers/user/random"
+    url = "https://prod-main-api-704464-00tre1p1erm.compute.instacloud-edge.com/api/v1/public/randomusers"
 
     response = requests.get(url)
 
     # print(type(response))
-
     # print(response)
 
     data = response.json()
@@ -16,22 +15,20 @@ def fetch_random_user():
 
     if data["success"] and "data" in data:
 
-        user_data = data["data"]
-        user_name = user_data["login"]["username"]
+        user_data = data["data"]["data"]
+        user=user_data[0] #first user is selected
+
+        user_name = user["login"]["username"]
 
         print(user_name)
 
-        # Access the list of users
-        # users = user_data["data"]
-
-        # # Access the first user in the list
-        # first_name = users[0]["name"]["first"]
-
-        # print(first_name)
 
 
-fetch_random_user()
+def main():
+    try:
+        pass
+    except:
+        pass
 
-# data = response.json()
-
-# print(data)
+if __name__=="__main__":
+    main()
