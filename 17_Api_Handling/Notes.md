@@ -21,31 +21,22 @@
 
 
 # Python API Handling — General Flow
+# Python API Handling — Flowchart
 
-## Flowchart
-
-Start
-↓
-Import required library (`requests`)
-↓
-Define API function
-↓
-Set API URL
-↓
-Send HTTP request (`GET`, `POST`, `PUT`, `DELETE`)
-↓
-Check response status
-↓
-Parse response (`response.json()`)
-↓
-Validate response data
-↓
-Extract required information
-↓
-Return or process data
-↓
-Display / Store / Use data
-↓
-Handle errors using `try-except`
-↓
-End
+```mermaid
+flowchart TD
+    A([Start]) --> B[Import requests library]
+    B --> C[Define API function]
+    C --> D[Set API URL]
+    D --> E[Send HTTP request]
+    E --> F[Check response status]
+    F --> G[Parse JSON response]
+    G --> H{Is response data valid?}
+    H -- Yes --> I[Extract required information]
+    I --> J[Return or process data]
+    J --> K[Display or store data]
+    H -- No --> L[Handle error]
+    F -. Request error .-> L
+    K --> M([End])
+    L --> M
+```
