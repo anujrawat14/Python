@@ -1,41 +1,51 @@
-# Python API Handling — Flow
+# Python API Handling 
+
+## steps 
+
+1. **Import Library** — `import requests`
+2. **Define Function** — Create a function to handle the API.
+3. **Set API URL** — Store the endpoint in a variable.
+4. **Send Request** — Use `requests.get()` or another HTTP method.
+5. **Check Response** — Verify the status using `response.raise_for_status()`.
+6. **Parse JSON** — Convert the response using `response.json()`.
+7. **Validate Data** — Check success and required keys.
+8. **Extract Data** — Access the required values from dictionaries or lists.
+9. **Return Data** — Return the extracted values if needed.
+10. **Call Function** — Use the function in `main()`.
+11. **Handle Errors** — Use `try-except` for request and processing errors.
+12. **Display or Store** — Print or save the result.
 
 ## Flow
 
-1. **Import library** → `import requests`
-2. **Define function** → `fetch_random_user()`
-3. **Set API URL** → Store the endpoint in `url`.
-4. **Send GET request** → `requests.get(url)`
-5. **Parse JSON response** → `response.json()` converts JSON into Python data.
-6. **Check response** → Verify `data["success"]` and `"data" in data`.
-7. **Extract user data**
-   - `data["data"]["data"]` → List of users
-   - `user_data[0]` → Select the first user
-   - Extract `login.username` and `location.country`
-8. **Return values** → `return user_name, user_country`
-9. **Call from `main()`** → Receive the returned values and print them.
-10. **Handle errors** → `try-except` catches exceptions.
-11. **Entry point** → `if __name__ == "__main__":` runs `main()` when the file is executed directly.
+**Request → Check → Parse → Validate → Extract → Return → Display → Handle Errors**
+
+
+# Python API Handling — General Flow
 
 ## Flowchart
 
-Start  
-↓  
-Import `requests`  
-↓  
-Define `fetch_random_user()`  
-↓  
-Send GET request to API  
-↓  
-Convert response using `response.json()`  
-↓  
-Is `success` true and `"data"` present?  
-- **Yes** → Extract first user → Get username and country → Return values
-- **No** → Raise exception  
-↓  
-`main()` receives values and prints the result  
-↓  
-Handle exceptions using `try-except`  
-↓  
+Start
+↓
+Import required library (`requests`)
+↓
+Define API function
+↓
+Set API URL
+↓
+Send HTTP request (`GET`, `POST`, `PUT`, `DELETE`)
+↓
+Check response status
+↓
+Parse response (`response.json()`)
+↓
+Validate response data
+↓
+Extract required information
+↓
+Return or process data
+↓
+Display / Store / Use data
+↓
+Handle errors using `try-except`
+↓
 End
-
