@@ -3,19 +3,23 @@ import requests
 
 def fetch_random_user():
 
-    url = "https://prod-main-api-704464-00tre1p1erm.compute.instacloud-edge.com/api/v1/public/randomusers?page=1&limit=10"
+    url = "https://api.freeapi.app/api/v1/public/randomusers/user/random"
 
     response = requests.get(url)
 
     # print(type(response))
 
-    #print(response)
+    # print(response)
 
     data = response.json()
     # converts the JSON response into Python data, usually a dictionary or list.
 
     if data["success"] and "data" in data:
+
         user_data = data["data"]
+        user_name = user_data["login"]["username"]
+
+        print(user_name)
 
         # Access the list of users
         # users = user_data["data"]
