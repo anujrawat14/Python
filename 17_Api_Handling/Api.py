@@ -15,11 +15,8 @@ def fetch_random_user():
     # converts the JSON response into Python data, usually a dictionary or list.
 
     if data["success"] and "data" in data:
-        print(data)
-
-
-
-
+        user_data = data["data"]
+        print(user_data)
 
 
 fetch_random_user()
