@@ -9,17 +9,40 @@ Base_url = "https://api.weatherapi.com/v1/current.json"
 
 def print_data(data):
 
-    print(f"City  {data["location"]["name"]} in {data["location"]["country"]} ")
-    print()
-    print("*" * 40)
+    location = data["location"]
+    current = data["current"]
 
-    print(f"Temperature is {data["current"]["temp_c"]} degree celsius ")
-    print(f"Condition is {data["current"]["condition"]["text"]} ")
+    condition = current["condition"]["text"].lower()
 
-    print("Humidity:", data["current"]["humidity"], "%")
-    print("Wind Speed:", data["current"]["wind_kph"], "km/h")
+    # Choose an emoji based on weather condition
+    if "sun" in condition or "clear" in condition:
+        icon = "☀️"
+    elif "rain" in condition or "drizzle" in condition:
+        icon = "🌧️"
+    elif "cloud" in condition or "overcast" in condition:
+        icon = "☁️"
+    elif "snow" in condition or "ice" in condition:
+        icon = "❄️"
+    elif "thunder" in condition:
+        icon = "⛈️"
+    elif "mist" in condition or "fog" in condition:
+        icon = "🌫️"
+    else:
+        icon = "🌤️"
 
-    print("*" * 40)
+    print("\n" + "═" * 42)
+    print("          🌍 WEATHER REPORT")
+    print("═" * 42)
+
+    print(f"\n📍 Location   : {location['name']}, {location['country']}")
+    print(f"{icon} Condition  : {current['condition']['text']}")
+    print(f"🌡️ Temperature: {current['temp_c']}°C")
+    print(f"💧 Humidity   : {current['humidity']}%")
+    print(f"💨 Wind Speed : {current['wind_kph']} km/h")
+
+    print("\n" + "═" * 42)
+    print("          Have a great day! ✨")
+    print("═" * 42 + "\n")
 
 
 def weather_API_handler(city):
