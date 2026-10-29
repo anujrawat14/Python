@@ -11,7 +11,7 @@ def print_data(data):
 
     print(f"City  {data["location"]["name"]} in {data["location"]["country"]} ")
     print()
-    print("*" * 10)
+    print("*" * 40)
 
     print(f"Temperature is {data["current"]["temp_c"]} degree celsius ")
     print(f"Condition is {data["current"]["condition"]["text"]} ")
@@ -19,7 +19,7 @@ def print_data(data):
     print("Humidity:", data["current"]["humidity"], "%")
     print("Wind Speed:", data["current"]["wind_kph"], "km/h")
 
-    print("*" * 10)
+    print("*" * 40)
 
 
 def weather_API_handler(city):
