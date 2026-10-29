@@ -1,10 +1,15 @@
-# APi key  c27f208a45e04709936113746262910
-#  weather api https://api.weatherapi.com/v1/current.json?key=c27f208a45e04709936113746262910&q=London
-
+import os
 import requests
 
-API_key = "c27f208a45e04709936113746262910"
-Base_url = "https://api.weatherapi.com/v1/current.json"
+from dotenv import load_dotenv
+
+load_dotenv()
+
+API_KEY = os.getenv("WEATHER_API_KEY")
+BASE_URL = os.getenv("WEATHER_API_URL")
+
+if not API_KEY or not BASE_URL:
+    raise ValueError("Missing API configuration. Check your .env file.")
 
 
 def print_data(data):
@@ -47,10 +52,10 @@ def print_data(data):
 
 def weather_API_handler(city):
 
-    params = {"key": API_key, "q": city}
+    params = {"key": API_KEY, "q": city}
 
     try:
-        response = requests.get(Base_url, params=params, timeout=10)
+        response = requests.get(BASE_URL, params=params, timeout=10)
 
         response.raise_for_status()  # raise exception for http errors
 
