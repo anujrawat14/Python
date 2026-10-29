@@ -20,7 +20,6 @@
 **Request → Check → Parse → Validate → Extract → Return → Display → Handle Errors**
 
 
-# Python API Handling — General Flow
 # Python API Handling — Flowchart
 
 ```mermaid
