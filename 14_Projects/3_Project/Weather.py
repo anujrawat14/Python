@@ -36,9 +36,9 @@ def print_data(data):
 
     print(f"\n📍 Location   : {location['name']}, {location['country']}")
     print(f"{icon} Condition  : {current['condition']['text']}")
-    # print(f"🌡️ Temperature: {current['temp_c']}°C")
-    # print(f"💧 Humidity   : {current['humidity']}%")
-    # print(f"💨 Wind Speed : {current['wind_kph']} km/h")
+    print(f"🌡️ Temperature: {current['temp_c']}°C")
+    print(f"💧 Humidity   : {current['humidity']}%")
+    print(f"💨 Wind Speed : {current['wind_kph']} km/h")
 
     print("\n" + "═" * 42)
     print("          Have a great day! ✨")
