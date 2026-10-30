@@ -72,7 +72,7 @@ def main():
 
             case "4":
                 list_videos()
-                video_id = input("Enter which video you want to delete : ")
+                video_id = input("Enter which video you want to delete : ").strip()
                 delete_videos(video_id)
 
             case "5":
