@@ -25,13 +25,12 @@ def Add_Videos(name, time):
 
 def update_videos(video_id, up_name, up_time):
     video_collection.update_one(
-        {"_id": video_id},
-        {"$set ": {"name": up_name, "time": up_time}}
+        {"_id": video_id}, {"$set ": {"name": up_name, "time": up_time}}
     )
 
 
 def delete_videos(id):
-    pass
+    video_collection.delete_one({"_id": id})
 
 
 def main():
