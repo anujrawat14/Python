@@ -1,9 +1,10 @@
 from pymongo import MongoClient
+from bson import ObjectId
 
-url = "mongodb+srv://youtubepy:youtubepy@youtubemanager.exoczgh.mongodb.net/"
+url = "mongodb+srv://yotubepy:yotubepy@youtubemanager.exoczgh.mongodb.net/"
 
 try:
-    client = MongoClient(url)
+    client = MongoClient(url, tlsAllowInvalidCertificates=True)
 except Exception as e:
     print(str(e))
 
@@ -22,21 +23,21 @@ print(video_collection)  # for debugging purpose
 def list_videos():
     # print(type(video_collection.find())) it return iterable
     for videos in video_collection.find():
-        print(f"ID : {videos["_id"]}, name :{videos["id"]} , time : {videos["time"]}")
+        print(f"ID : {videos["_id"]}, name :{videos["name"]} , time : {videos["time"]}")
 
 
 def Add_Videos(name, time):
-    video_collection.collection.insert_one({name: name, time: time})
+    video_collection.insert_one({"name": name, "time": time})
 
 
 def update_videos(video_id, up_name, up_time):
     video_collection.update_one(
-        {"_id": video_id}, {"$set ": {"name": up_name, "time": up_time}}
+        {"_id": ObjectId(video_id)}, {"$set": {"name": up_name, "time": up_time}}
     )
 
 
 def delete_videos(id):
-    video_collection.delete_one({"_id": id})
+    video_collection.delete_one({"_id": ObjectId(id)})
 
 
 def main():
@@ -64,7 +65,7 @@ def main():
 
             case "3":
                 list_videos()
-                video_id = input("Enter id of video to update : ")
+                video_id = input("Enter id of video to update : ").strip()
                 up_name = input("Enter updated Name of video : ")
                 up_time = input("Enter updated duration  of video : ")
                 update_videos(video_id, up_name, up_time)
