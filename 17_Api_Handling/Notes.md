@@ -54,7 +54,6 @@ flowchart TD
 
 ## Syntax
 
-
 ```python
 import requests
 
