@@ -8,4 +8,12 @@ db = client["YoutubeManager"]
 
 video_collection = db["videos"]  # it will create a video collection
 
-print(video_collection)
+print(video_collection)  # for debugging purpose
+
+
+def main():
+    pass
+
+
+if __name__ == "__main__":
+    main()
