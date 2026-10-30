@@ -4,7 +4,7 @@ url = "mongodb+srv://youtubepy:youtubepy@youtubemanager.exoczgh.mongodb.net/"
 
 client = MongoClient(url)
 
-db = client("YoutubeManager")
+db = client["YoutubeManager"]
 
 video_collection = db["videos"]  # it will create a video collection
 
