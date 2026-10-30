@@ -20,7 +20,9 @@ def list_videos():
 
 
 def Add_Videos(name, time):
-    video_collection.collection.insert_one({name: name, time: time})
+    video_collection.collection.insert_one(
+        {name: name, time: time}
+        )
 
 
 def update_videos(video_id, up_name, up_time):
