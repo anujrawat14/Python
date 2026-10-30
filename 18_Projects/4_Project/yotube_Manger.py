@@ -2,7 +2,13 @@ from pymongo import MongoClient
 
 url = "mongodb+srv://youtubepy:youtubepy@youtubemanager.exoczgh.mongodb.net/"
 
-client = MongoClient(url)
+try:
+    client = MongoClient(url)
+except Exception as e:
+    print(str(e))
+
+print(client)  # debugging to check client is connecting or not
+
 
 db = client["YoutubeManager"]
 
@@ -20,15 +26,12 @@ def list_videos():
 
 
 def Add_Videos(name, time):
-    video_collection.collection.insert_one(
-        {name: name, time: time}
-        )
+    video_collection.collection.insert_one({name: name, time: time})
 
 
 def update_videos(video_id, up_name, up_time):
     video_collection.update_one(
-        {"_id": video_id},
-        {"$set ": {"name": up_name, "time": up_time}}
+        {"_id": video_id}, {"$set ": {"name": up_name, "time": up_time}}
     )
 
 
