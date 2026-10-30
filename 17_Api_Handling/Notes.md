@@ -39,3 +39,36 @@ flowchart TD
     K --> M([End])
     L --> M
 ```
+
+# Methods of Api Handling 
+
+# HTTP Methods in API Handling
+
+| Method   | Purpose                 | Example                      |
+| -------- | ----------------------- | ---------------------------- |
+| `GET`    | Retrieve data           | Fetch weather information    |
+| `POST`   | Create new data         | Add a new user               |
+| `PUT`    | Replace existing data   | Update an entire user record |
+| `PATCH`  | Update part of the data | Change only a username       |
+| `DELETE` | Remove data             | Delete a user                |
+
+## Syntax
+
+```python
+import requests
+
+# GET - Retrieve data
+response = requests.get(url)
+
+# POST - Create new data
+response = requests.post(url, json=data)
+
+# PUT - Replace existing data
+response = requests.put(url, json=data)
+
+# PATCH - Update specific fields
+response = requests.patch(url, json=data)
+
+# DELETE - Remove data
+response = requests.delete(url)
+```
