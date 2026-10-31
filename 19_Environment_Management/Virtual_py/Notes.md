@@ -1,24 +1,3 @@
-virtualenv makes virtual enviromnet and it doesnt pollute my pyhton enviormnt as well and 
-
-
-step 1: python -m venv .venv  .venv isname of folder
-
-step 2 : virtual activate
-
-step 3 : .\.venv\Scripts\activate
-
-step 4 pip list
-
-step 5 : >pip list> requirments.txt
-
-step 6 : instal from requirments 
-       pip install -r requirements.txt
-
-step 6 : unistal
-    pip uninstall django
-
-step 7 : deactivated
-
 # Python Virtual Environments & Package Management
 
 ## 1. What is a virtual environment?
@@ -122,26 +101,6 @@ When the environment is active, the first Python path should point to:
 .venv\Scripts\python.exe
 ```
 
-## 4. Recommended project structure
-
-```text
-Virtual_py/
-│
-├── .venv/
-├── requirements.txt
-├── main.py
-└── .gitignore
-```
-
-Add the following to `.gitignore`:
-
-```gitignore
-.venv/
-__pycache__/
-.env
-```
-
-**Important:** Do not upload `.venv` to GitHub. Commit `requirements.txt` instead, so other developers can recreate the environment.
 
 ## 5. Quick revision
 
