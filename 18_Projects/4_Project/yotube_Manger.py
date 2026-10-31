@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 
-# from bson import ObjectId
+from bson import ObjectId
 
 url = "mongodb+srv://yotubepy:yotubepy@youtubemanager.exoczgh.mongodb.net/"
 
@@ -33,15 +33,16 @@ def Add_Videos(name, time):
 
 def update_videos(video_id, up_name, up_time):
     video_collection.update_one(
-        # {"_id": ObjectId(video_id)}, {"$set": {"name": up_name, "time": up_time}}
-        {"_id": video_id},
+        {"_id": ObjectId(video_id)},
         {"$set": {"name": up_name, "time": up_time}},
+        # {"_id": video_id},
+        # {"$set": {"name": up_name, "time": up_time}},
     )
 
 
 def delete_videos(id):
-    # video_collection.delete_one({"_id": ObjectId(id)})
-    video_collection.delete_one({"_id": id})
+    video_collection.delete_one({"_id": ObjectId(id)})
+    # video_collection.delete_one({"_id": id})
 
 
 def main():
