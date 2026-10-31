@@ -16,3 +16,5 @@ step 6 : instal from requirments
 
 step 6 : unistal
     pip uninstall django
+
+step 7 : deactivated
