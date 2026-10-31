@@ -12,4 +12,7 @@ step 4 pip list
 step 5 : >pip list> requirments.txt
 
 step 6 : instal from requirments 
-       pip install -r requirements.txt   
+       pip install -r requirements.txt
+
+step 6 : unistal
+    pip uninstall django
