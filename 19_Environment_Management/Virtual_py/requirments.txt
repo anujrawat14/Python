@@ -1,0 +1,5 @@
+Package   Version
+--------- -------
+dnspython 2.9.1
+pip       26.2.1
+pymongo   4.19.0
