@@ -164,4 +164,5 @@ C:\Users\anujr\anaconda3\envs\py310
 - `conda deactivate` exits the active environment.
 - `conda list` displays installed packages.
 - `environment.yml` helps reproduce an environment.
-- - don't use pip with conda
+-  don't use pip with conda
+-  suitable for libraries where there is inter dependent libraries
