@@ -166,31 +166,7 @@ conda create --name py311 python=3.11
 conda install python=3.11
 ```
 
-## 6. Pip Commands Inside Conda
-
-```cmd
-python -m pip install requests
-```
-
-```cmd
-python -m pip list
-```
-
-```cmd
-python -m pip uninstall requests
-```
-
-```cmd
-python -m pip freeze > requirements.txt
-```
-
-```cmd
-python -m pip install -r requirements.txt
-```
-
-**Important:** Activate the correct Conda environment before using pip.
-
-## 7. Useful CMD Commands
+## 6. Useful CMD Commands
 
 | Command | Purpose |
 |---|---|
@@ -200,7 +176,7 @@ python -m pip install -r requirements.txt
 | `dir` | List files and folders |
 | `cls` | Clear terminal |
 
-## 8. My Daily Conda Workflow
+## 7. My Daily Conda Workflow
 
 ```cmd
 conda env list
@@ -216,39 +192,7 @@ conda install seaborn
 conda deactivate
 ```
 
-## 9. Troubleshooting
-
-### Conda command not recognized
-
-Run Conda initialization from Anaconda Prompt:
-
-```cmd
-conda init cmd.exe
-```
-
-Restart the terminal afterwards.
-
-### Check which Python is active
-
-```cmd
-where python
-```
-
-### Check active environment
-
-```cmd
-conda info --envs
-```
-
-The `*` symbol identifies the active environment.
-
-### Check Python executable
-
-```cmd
-python -c "import sys; print(sys.executable)"
-```
-
-## 10. Quick Revision
+## 8. Quick Revision
 
 | Task | Command |
 |---|---|
