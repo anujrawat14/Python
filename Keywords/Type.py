@@ -6,18 +6,22 @@
 # of an object/value.
 
 x = 10
-name = "Anuj"
-price = 99.5
-is_active = True
 
 print(type(x))
 # <class 'int'>
 
+name = "Anuj"
+
 print(type(name))
 # <class 'str'>
 
+price = 99.5
+
 print(type(price))
 # <class 'float'>
+
+
+is_active = True
 
 print(type(is_active))
 # <class 'bool'>
