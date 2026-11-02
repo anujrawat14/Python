@@ -19,6 +19,7 @@ for i in range(2, 6):
 
 
 # Example 3: range(start, stop, step)
+# step tell hiw many iteration to skip
 
 for i in range(2, 11, 2):
     print(i)
